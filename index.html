@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MZ-Foods — order fresh burgers, pizza, bowls, pasta and more for delivery. Browse the menu, customize your cart and place an order.">
+<link rel="canonical" href="https://food-website-v1-0.vercel.app/">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Muhammad Zaid">
+<meta name="theme-color" content="#f4512a">
+<meta property="og:type" content="website"><meta property="og:title" content="MZ-Foods — Good food, good mood."><meta property="og:description" content="Fresh food, clear prices and easy ordering."><meta property="og:url" content="https://food-website-v1-0.vercel.app/"><meta property="og:site_name" content="MZ-Foods">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="MZ-Foods — Good food, good mood."><meta name="twitter:description" content="Fresh food, clear prices and easy ordering.">
+<title>MZ-Foods — Good food, good mood.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <a class="logo" href="index.html" aria-label="MZ-Foods home">MZ-Foods<span>.</span></a>
+  <nav class="desktop-nav" aria-label="Primary">
+    <a href="menu.html">Menu</a><a href="popular.html">Popular</a><a href="about.html">About</a><a href="contact.html">Contact Us</a><a href="login.html" data-auth-login>Login</a><a href="user-profile.html" data-auth-profile>My Profile</a><a href="profile.html">Developer</a>
+  </nav>
+  <div class="header-actions"><div class="header-search" id="headerSearchBox"><button class="icon-btn" id="headerSearchToggle" type="button" aria-label="Open search" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></button><form class="header-search-form" id="headerSearchForm" action="menu.html" method="get"><label class="sr-only" for="headerSearchInput">Search food</label><input id="headerSearchInput" name="q" type="search" placeholder="Search food..." autocomplete="off"></form></div><button class="icon-btn cart-btn" id="cartBtn" aria-label="Open shopping cart"><i class="fa-solid fa-bag-shopping"></i><b id="cartCount" aria-live="polite">0</b></button><button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button></div>
+</header>
+<nav class="mobile-nav hidden" id="mobileNav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="popular.html">Popular</a><a href="about.html">About</a><a href="contact.html">Contact Us</a><a href="login.html" data-auth-login>Login</a><a href="user-profile.html" data-auth-profile>My Profile</a><a href="profile.html">Developer</a></nav>
+<main>
+<section class="hero"><div class="hero-content"><span class="pill">🔥 Freshly prepared · delivery available</span><h1>Good food.<br><em>Good mood.</em></h1><p>Order satisfying meals from a carefully organized menu. Choose your favorites, review your cart and place a demo order in a few clicks.</p><div class="hero-actions"><a href="menu.html" class="primary-btn">Explore menu <span>→</span></a><button class="play-btn" id="storyBtn" type="button"><i class="fa-regular fa-circle-play"></i> Our story</button></div></div><div class="hero-visual"><div class="hero-circle"></div><div class="floating-card delivery"><span><i class="fa-solid fa-bolt"></i></span><div><strong>Fast delivery</strong><small>Track your order</small></div></div><div class="food-plate"><img src="assets/menu-image.webp" alt="MZ-Foods signature burger" width="888" height="888" loading="eager" fetchpriority="high"></div><div class="floating-card rating"><span><i class="fa-solid fa-star"></i></span><div><strong>Fresh choices</strong><small>Built for food lovers</small></div></div></div></section>
+<section class="categories" id="menu"><div class="section-heading"><div><span class="eyebrow">WHAT ARE YOU CRAVING?</span><h2>Find your favorite</h2></div><div class="category-arrows"><button id="prevCat" aria-label="Previous categories">←</button><button id="nextCat" aria-label="Next categories">→</button></div></div><div class="category-row" id="categoryRow"></div><p class="category-note">Choose a category to open the menu with that filter applied, or browse the full <a href="menu.html">Menu</a>.</p></section>
+<section class="popular" id="popular"><div class="section-heading"><div><span class="eyebrow">CUSTOMER FAVORITES</span><h2>Popular right now</h2></div><a href="menu.html" class="view-all">View all →</a></div><div class="food-grid" id="foodGrid"></div><div class="center-action"><a class="secondary-btn" href="menu.html">Browse the full menu</a></div></section>
+<section class="promo" id="about"><div class="promo-copy"><span class="eyebrow">MORE THAN JUST FOOD</span><h2>Made with care,<br><em>served with joy.</em></h2><p>MZ-Foods is structured like a real ordering experience: useful menu categories, readable food descriptions, transparent PKR pricing, cart persistence and accessible controls.</p><a href="about.html" class="primary-btn">About MZ-Foods <span>→</span></a></div><div class="promo-art"><div class="promo-blob"></div><div class="promo-food">🍕</div><span class="spark s1">✦</span><span class="spark s2">✦</span><span class="spark s3">•</span></div></section>
+<section class="delivery-section" id="delivery"><div class="section-heading centered"><div><span class="eyebrow">DELIVERY</span><h2>Reliable delivery options.</h2><p class="section-lead">Choose the delivery method that fits your order. MZ-Foods keeps the process simple, shows the delivery fee before confirmation, and lets you manage your saved destination from your profile.</p></div></div><div class="delivery-grid"><article><i class="fa-solid fa-motorcycle"></i><h3>Fast local delivery</h3><p>Choose Standard, Express or Same-day delivery at checkout. The selected fee is shown clearly before you confirm your order.</p><a class="text-link" href="menu.html">Start an order →</a></article><article><i class="fa-solid fa-box"></i><h3>Courier support</h3><p>TCS, Leopards, M&amp;P, Trax and courier options are displayed for this frontend demo, giving the checkout experience a clear delivery step.</p><a class="text-link" href="about.html">Learn about MZ-Foods →</a></article><article><i class="fa-solid fa-location-dot"></i><h3>Clear destination</h3><p>Save and manage delivery addresses in your profile, then select the address you want to use when checking out.</p><a class="text-link" href="user-profile.html">Manage your address →</a></article></div></section><section class="steps" id="how-it-works"><div class="section-heading centered"><div><span class="eyebrow">HOW IT WORKS</span><h2>MZ-Foods it. Tap it. Love it.</h2><p class="section-lead">Everything is connected: discover a dish, build your cart, review delivery, and confirm the demo order without losing your place.</p></div></div><div class="step-grid"><article><div class="step-icon"><i class="fa-solid fa-utensils"></i></div><h3>Pick your food</h3><p>Open the menu, filter by category, search by name or ingredient, and open any item for full details.</p><a class="text-link" href="menu.html">Explore the menu →</a></article><article><div class="step-icon"><i class="fa-solid fa-cart-shopping"></i></div><h3>Build your order</h3><p>Add items, change quantities, remove anything you no longer want, and review your subtotal in the cart.</p><a class="text-link" href="menu.html">Choose your dishes →</a></article><article><div class="step-icon"><i class="fa-solid fa-motorcycle"></i></div><h3>Place the order</h3><p>Select a saved address and delivery method, review the final amount, then confirm the frontend demo order.</p><a class="text-link" href="user-profile.html">Set delivery details →</a></article></div></section>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html">MZ-Foods<span>.</span></a>
+      <p>Fresh food, clear prices and a simple ordering experience.</p>
+      <p class="footer-contact"><i class="fa-solid fa-location-dot"></i> Gulshan Iqbal, Karachi</p>
+      <p class="footer-contact"><i class="fa-solid fa-envelope"></i> mz.hotel@gmail.com</p>
+    </div>
+    <div class="footer-block">
+      <h3>Navigation</h3>
+      <div class="footer-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="popular.html">Popular</a><a href="about.html">About</a><a href="contact.html">Contact Us</a><a href="login.html" data-auth-login>Login</a><a href="user-profile.html" data-auth-profile>My Profile</a><a href="profile.html">Developer</a></div>
+    </div>
+    <div class="footer-block">
+      <h3>Search</h3>
+      <form class="footer-search" action="menu.html" method="get"><label class="sr-only" for="footerSearch">Search menu</label><input id="footerSearch" name="q" type="search" placeholder="Search food..." autocomplete="off"><button type="submit" aria-label="Search menu"><i class="fa-solid fa-magnifying-glass"></i></button></form>
+      <h3 class="footer-subheading">Follow</h3>
+      <div class="social-links"><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></div>
+    </div>
+  </div>
+  <div class="footer-services">
+    <div class="service-group"><h3>Delivery partners</h3><div class="brand-row"><span class="brand-chip"><img src="https://api.iconify.design/mdi/truck-fast.svg?color=%23f4512a" alt="" loading="lazy">TCS</span><span class="brand-chip"><img src="https://api.iconify.design/mdi/package-variant-closed.svg?color=%23f4512a" alt="" loading="lazy">Leopards</span><span class="brand-chip"><img src="https://api.iconify.design/mdi/truck-delivery.svg?color=%23f4512a" alt="" loading="lazy">M&amp;P</span><span class="brand-chip"><img src="https://api.iconify.design/mdi/motorbike.svg?color=%23f4512a" alt="" loading="lazy">Trax</span><span class="brand-chip"><img src="https://api.iconify.design/mdi/map-marker-path.svg?color=%23f4512a" alt="" loading="lazy">Courier</span></div></div>
+    <div class="service-group"><h3>We accept</h3><div class="payment-row"><span class="payment-chip"><i class="fa-solid fa-money-bill-wave"></i> Cash</span><span class="payment-chip"><i class="fa-solid fa-credit-card"></i> Card</span><span class="payment-chip"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Pay</span></div></div>
+    <div class="developer-mini"><a href="profile.html"><img src="assets/my-image-compressed.webp" alt="Muhammad Zaid developer profile"><span><strong>Muhammad Zaid</strong><small>HTML · CSS · JavaScript · Git · GitHub</small></span></a></div>
+  </div>
+  <p class="copyright">© 2026 MZ-Foods. All rights reserved. · Developed by Muhammad Zaid</p>
+</footer>
+<div class="cart-drawer hidden" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="drawer-head"><div><span class="eyebrow">YOUR ORDER</span><h2 id="cartTitle">Your cart</h2></div><button id="closeCart" aria-label="Close cart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><div><span>Subtotal</span><strong id="cartTotal">PKR 0</strong></div><button class="primary-btn" id="checkoutBtn">Checkout <span>→</span></button></div></div><div class="drawer-backdrop hidden" id="drawerBackdrop"></div>
+<div class="story-modal hidden" id="storyModal" role="dialog" aria-modal="true" aria-labelledby="storyTitle"><div><button id="closeStory" aria-label="Close story">×</button><span class="eyebrow">OUR STORY</span><h2 id="storyTitle">A thoughtful food-ordering experience.</h2><p>MZ-Foods was built as a frontend project to make a food-ordering journey feel clear and practical. The experience connects menu discovery, category filtering, search, cart management, saved addresses and checkout in one responsive interface. The project is intentionally framework-free so the HTML, CSS and JavaScript remain easy to inspect, debug and maintain.</p><button class="primary-btn" id="storyDone">Continue browsing</button></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="js/script.js"></script>
+</body></html>
